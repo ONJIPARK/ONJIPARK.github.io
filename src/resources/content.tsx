@@ -32,7 +32,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/your-id/",
+    link: "https://www.linkedin.com/in/onji-park/",
     essential: true,
   },
   {
@@ -175,8 +175,8 @@ const about: About = {
     title: "Education & Certifications",
     institutions: [
       {
-        name: "○○대학교 ○○학과", // [수정 필요] 대학·전공·졸업연도
-        description: <>3년 반 조기 · 수석 졸업</>,
+        name: "명지대학교 경영정보학과",
+        description: <>경영정보학 학사 · 학점 4.29 · 3년 반 조기 · 수석 졸업</>,
       },
       {
         name: "자격증",
