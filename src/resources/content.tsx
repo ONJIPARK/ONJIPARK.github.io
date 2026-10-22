@@ -5,12 +5,12 @@ import { Line, Row, Text } from "@once-ui-system/core";
 // [수정 필요] 이름·이메일·링크는 실제 값으로 교체하세요.
 // ──────────────────────────────────────────────────────────
 const person: Person = {
-  firstName: "○○",
-  lastName: "○",
-  name: "○○○",
+  firstName: "온지",
+  lastName: "박",
+  name: "박온지",
   role: "AI Product Planner",
   avatar: "/images/avatar.jpg", // public/images/avatar.jpg 에 프로필 사진 넣기
-  email: "your.email@example.com",
+  email: "dhswl653@gmail.com",
   location: "Asia/Seoul",
   languages: ["한국어", "English"],
   locale: "ko",
@@ -176,7 +176,7 @@ const about: About = {
     institutions: [
       {
         name: "명지대학교 경영정보학과",
-        description: <>경영정보학 학사 · 학점 4.29 · 3년 반 조기 · 수석 졸업</>,
+        description: <>경영정보학 학사 · 학점 4.29 · 조기 · 과수석 졸업</>,
       },
       {
         name: "자격증",
