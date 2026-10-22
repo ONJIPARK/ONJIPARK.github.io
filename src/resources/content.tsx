@@ -1,24 +1,24 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
-// ?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�
-// [?�정 ?�요] ?�름·?�메?�·링?�는 ?�제 값으�?교체?�세??
-// ?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�?�
+// ──────────────────────────────────────────────────────────
+// [수정 필요] 이름·이메일·링크는 실제 값으로 교체하세요.
+// ──────────────────────────────────────────────────────────
 const person: Person = {
-  firstName: "?�○",
-  lastName: "??,
-  name: "?�○??,
+  firstName: "○○",
+  lastName: "○",
+  name: "○○○",
   role: "AI Product Planner",
-  avatar: "/images/avatar.jpg", // public/images/avatar.jpg ???�로???�진 ?�기
+  avatar: "/images/avatar.jpg", // public/images/avatar.jpg 에 프로필 사진 넣기
   email: "your.email@example.com",
   location: "Asia/Seoul",
-  languages: ["?�국??, "English"],
+  languages: ["한국어", "English"],
   locale: "ko",
 };
 
 const newsletter: Newsletter = {
   display: false,
-  title: <>?�스?�터</>,
+  title: <>뉴스레터</>,
   description: <></>,
 };
 
@@ -47,10 +47,10 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name} ??AI Product Planner`,
+  title: `${person.name} — AI Product Planner`,
   description:
-    "AI ?�루?�을 직접 만들�? 직접 ?�고, 직접 구축까�? ?�본 AI Product Planner???�트?�리??,
-  headline: <>AI ?�루?�을 만들�? ?�고, 구축까�? ?�어??기획??/>,
+    "AI 솔루션을 직접 만들고, 직접 팔고, 직접 구축까지 해본 AI Product Planner의 포트폴리오",
+  headline: <>AI 솔루션을 만들고, 팔고, 구축까지 이어온 기획자</>,
   featured: {
     display: true,
     title: (
@@ -58,7 +58,7 @@ const home: Home = {
         <strong className="ml-4">AKeeON</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          ?�???�로?�트
+          대표 프로젝트
         </Text>
       </Row>
     ),
@@ -66,13 +66,13 @@ const home: Home = {
   },
   subline: (
     <>
-      AK?�이?�스 AX?�업?�?�서 AWS·Azure ?�에 AI ?�랫??" "}
+      AK아이에스 AX사업팀에서 AWS·Azure 위에 AI 플랫폼{" "}
       <Text as="span" size="xl" weight="strong">
         AKeeON
       </Text>
-      ???� ?�체 개발?�고, �??�???�매부??구축 PL까�? ??주기�?경험?�습?�다.
+      을 팀 자체 개발하고, 첫 대외 판매부터 구축 PL까지 전 주기를 경험했습니다.
       <br />
-      RPA 개발 3??+ AI 기획·개발 2??
+      RPA 개발 3년 + AI 기획·개발 2년.
     </>
   ),
 };
@@ -80,8 +80,8 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About ??${person.name}`,
-  description: `${person.name}, AI Product Planner @ AK?�이?�스 AX?�업?�`,
+  title: `About – ${person.name}`,
+  description: `${person.name}, AI Product Planner @ AK아이에스 AX사업팀`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -99,23 +99,25 @@ const about: About = {
     description: (
       <>
         <p>
-          <strong>AI ?�루?�을 직접 만들�? 직접 ?�고, 직접 구축까�? ?�본 AI Product Planner</strong>
-          ?�니?? 3?�의 RPA 개발, 2?�의 AI 기획·개발 경험??바탕?�로 기술 ?�현 가?�성�?비즈?�스
-          가치�? ?�시???�단?�니??
+          <strong>AI 솔루션을 직접 만들고, 직접 팔고, 직접 구축까지 해본 AI Product Planner</strong>
+          입니다. 3년의 RPA 개발, 2년의 AI 기획·개발 경험을 바탕으로 기술 실현 가능성과 비즈니스
+          가치를 동시에 판단합니다.
         </p>
         <p>
-          AK?�이?�스 AX?�업?�?�서 ?�주 ?�이 ?� ?�체 개발??AX ?�랫??" "}
-          <strong>AKeeON(AI Chatbot · Admin Page)</strong>??초기 구축�?기획???�께 맡았�?
-          AWS·Azure ?�라?�드 ?�에??AI Chatbot, Admin Page, SAP ?�동 Agent ?�을 직접 개발?�습?�다.
-          ???�루?��? 2?�여 만에 ?�경그룹??AI ?�랫?�으�??�리매�??�습?�다.
+          AK아이에스 AX사업팀에서 외주 없이 팀 자체 개발한 AX 플랫폼{" "}
+          <strong>AKeeON(AI Chatbot · Admin Page)</strong>의 초기 구축과 기획을 함께 맡았고,
+          AWS·Azure 클라우드 위에서 AI Chatbot, Admin Page, SAP 연동 Agent 등을 직접 개발했습니다.
+          이 솔루션은 2년여 만에 애경그룹의 AI 플랫폼으로 자리매김했습니다.
         </p>
         <p>
-          ?�루?�을 ?�기 ?�해 ?�품?�개?�·�?�?모델·?�루???�개 ?�상·계약 ?�로?�스�?직접 만들?�고,
-          ?�?�스·AK PLAZA·?�주??��·?�경케미칼·?�경?�페?�티 ??계열?��? ?�어?��? ???�??고객??          직접 만나 ?�모?� ?�개�??�행?�습?�다.{" "}
+          솔루션을 팔기 위해 제품소개서·가격 모델·솔루션 소개 영상·계약 프로세스를 직접 만들었고,
+          홀딩스·AK PLAZA·제주항공·애경케미칼·애경스페셜티 등 계열사와 에어제타 등 대외 고객을
+          직접 만나 데모와 소개를 수행했습니다.{" "}
           <strong>
-            AKeeON??�??�???�매 건인 ?�경케미칼 ?�로?�트??PL�?참여???�공?�으�??�료?�고,
-            ?�재 2�??�로?�트�??�행 �?          </strong>
-          ?�니??
+            AKeeON의 첫 대외 판매 건인 애경케미칼 프로젝트에 PL로 참여해 성공적으로 완료했고,
+            현재 2차 프로젝트를 수행 중
+          </strong>
+          입니다.
         </p>
       </>
     ),
@@ -125,42 +127,43 @@ const about: About = {
     title: "Experience",
     experiences: [
       {
-        company: "AK?�이?�스 · AX?�업?�",
-        timeframe: "2025.01 ???�재",
+        company: "AK아이에스 · AX사업팀",
+        timeframe: "2025.01 – 현재",
         role: "AI Product Planner",
         achievements: [
           <>
-            <strong>?�업 기획</strong> ??AKeeON ?�품?�개?? 가�?모델, ?�루???�개 ?�상 기획·?�집,
-            계약 ?�로?�스 ?�립. �?��복�?몰·에?�제?� AI OCR ?�안 ?�업.
+            <strong>사업 기획</strong> — AKeeON 제품소개서, 가격 모델, 솔루션 소개 영상 기획·편집,
+            계약 프로세스 수립. 국군복지몰·에어제타 AI OCR 제안 작업.
           </>,
           <>
-            <strong>고객 컨택·?�모</strong> ??AK?�?�스, AK PLAZA, ?�주??��, ?�경케미칼,
-            ?�경?�페?�티 ??계열??�??�어?��? ???�??고객 ?�???�연·결과보고.
+            <strong>고객 컨택·데모</strong> — AK홀딩스, AK PLAZA, 제주항공, 애경케미칼,
+            애경스페셜티 등 계열사 및 에어제타 등 대외 고객 대상 시연·결과보고.
           </>,
           <>
-            <strong>구축·개발</strong> ??AKeeON 초기 구축(AI Hub, Orchestrator), ?�경케미칼
-            1차�?�??�로?�트 PL(?�규검??RAG · SAP CO · SAP ?�매?�더 Agent 3�?, ?�주??�� RAG PoC,
-            ?�어?��? ?�항 ?�조 Agent PoC.
+            <strong>구축·개발</strong> — AKeeON 초기 구축(AI Hub, Orchestrator), 애경케미칼
+            1차·2차 프로젝트 PL(사규검색 RAG · SAP CO · SAP 판매오더 Agent 3종), 제주항공 RAG PoC,
+            에어제타 운항 편조 Agent PoC.
           </>,
           <>
-            <strong>?�트??/strong> ???�티버스·?�루커스·AWS·Microsoft?� ?�업, Microsoft AI
+            <strong>파트너</strong> — 에티버스·클루커스·AWS·Microsoft와 협업, Microsoft AI
             Partner Solution Showcase 참여.
           </>,
         ],
         images: [],
       },
       {
-        company: "AK?�이?�스 · RPA",
-        timeframe: "2022.02 ??2025.01",
+        company: "AK아이에스 · RPA",
+        timeframe: "2022.02 – 2025.01",
         role: "RPA Developer",
         achievements: [
           <>
-            <strong>KB�???�??RPA ?�시개발</strong>(2024.04??025.01) ??KB ?�레?�워??기반 ?�규
-            과제 ?�계·개발, ?�후 ?�레?�워??개선, 고객 만족??80% ?�상.
+            <strong>KB국민은행 RPA 상시개발</strong>(2024.04–2025.01) — KB 프레임워크 기반 신규
+            과제 설계·개발, 노후 프레임워크 개선, 고객 만족도 80% 이상.
           </>,
           <>
-            <strong>?��?카드/커머??RPA ?�시개발</strong>(2022.03??023.12) ???�허 ??기반 병렬
-            처리 ?�키?�처�??�사 ?�무 ?�동??과제 ?�계·개발, 망분�?�금??보안 ?�경?�서 150??�?            과제 ?�레?�워??�패???�득.
+            <strong>현대카드/커머셜 RPA 상시개발</strong>(2022.03–2023.12) — 특허 큐 기반 병렬
+            처리 아키텍처로 전사 업무 자동화 과제 설계·개발, 망분리·금융 보안 환경에서 150여 개
+            과제 프레임워크·패턴 습득.
           </>,
         ],
         images: [],
@@ -172,23 +175,24 @@ const about: About = {
     title: "Education & Certifications",
     institutions: [
       {
-        name: "?�○?�?�교 ?�○?�과", // [?�정 ?�요] ?�?�·전공·졸?�연??        description: <>3??�?조기 · ?�석 졸업</>,
+        name: "○○대학교 ○○학과", // [수정 필요] 대학·전공·졸업연도
+        description: <>3년 반 조기 · 수석 졸업</>,
       },
       {
-        name: "?�격�?,
+        name: "자격증",
         description: (
           <>
-            빅데?�터분석기사(2025.07) · AWS Solutions Architect ??Associate(2025.05) ·
-            ?�보처리기사(2023.11) · ADsP(2022.09)
+            빅데이터분석기사(2025.07) · AWS Solutions Architect – Associate(2025.05) ·
+            정보처리기사(2023.11) · ADsP(2022.09)
           </>
         ),
       },
       {
-        name: "AI RPA ?�업 ?�습 ?�계 ?�턴??· ?�학 ?�력?�로그램",
+        name: "AI RPA 사업 실습 연계 인턴십 · 산학 협력프로그램",
         description: (
           <>
-            2021 ???�국보육진흥???��? ?�증 ?�스???�동?? (�?코스?�엑??AI RPA 과제 PM(과제
-            발굴·?�로?�스 ?�의???�성)
+            2021 — 한국보육진흥원 평가 인증 시스템 자동화, (주)코스알엑스 AI RPA 과제 PM(과제
+            발굴·프로세스 정의서 작성)
           </>
         ),
       },
@@ -204,7 +208,7 @@ const about: About = {
           <>
             AWS Bedrock · S3 · OpenSearch · Lambda · DynamoDB · ECS Fargate 기반 Serverless
             RAG/Agent 구성. Azure OpenAI · AI Foundry · AI Search · Blob Storage · Container
-            Apps(ACA) 기반 RAG ?�이?�라??구축 �?컨테?�너 배포.
+            Apps(ACA) 기반 RAG 파이프라인 구축 및 컨테이너 배포.
           </>
         ),
         tags: [
@@ -215,11 +219,12 @@ const about: About = {
         images: [],
       },
       {
-        title: "AI ?�업 발굴 · 기획",
+        title: "AI 사업 발굴 · 기획",
         description: (
           <>
-            Pain Point ?�터�???AX 과제 ?�출 ??PoC 범위 ?�의 ???�안?�·견????계약까�? ??주기.
-            ?�품?�개?? 가�?모델, ?�개 ?�상, ?�모 ?�나리오 ???�일�??�산 기획·?�작. ?�원�??�??            결과보고.
+            Pain Point 인터뷰 → AX 과제 도출 → PoC 범위 정의 → 제안서·견적 → 계약까지 전 주기.
+            제품소개서, 가격 모델, 소개 영상, 데모 시나리오 등 세일즈 자산 기획·제작. 임원진 대상
+            결과보고.
           </>
         ),
         tags: [],
@@ -229,9 +234,9 @@ const about: About = {
         title: "AI Agent · RAG 개발",
         description: (
           <>
-            문서 ?�처리–임베딩?��??�–응???�성 End-to-End RAG ?�이?�라?? Hybrid Search · Multi
-            Query · 메�??�이???�터링으�??�확??개선(95%+). Tool Calling 기반 SAP CO · ?�매?�더
-            Agent, ??�� ?�항 ?�조 Agent ?�계.
+            문서 전처리–임베딩–검색–응답 생성 End-to-End RAG 파이프라인, Hybrid Search · Multi
+            Query · 메타데이터 필터링으로 정확도 개선(95%+). Tool Calling 기반 SAP CO · 판매오더
+            Agent, 항공 운항 편조 Agent 설계.
           </>
         ),
         tags: [
@@ -247,7 +252,8 @@ const about: About = {
         title: "Backend / Data · RPA",
         description: (
           <>
-            FastAPI ?�비???�계, Redis ?�증, MySQL ERD·?�이??모델�? CI/CD. UiPath 기반 금융�?            ?�무 ?�동?? Document Understanding(OCR) ?�벨링·학???�이?�라??
+            FastAPI 서비스 설계, Redis 인증, MySQL ERD·데이터 모델링, CI/CD. UiPath 기반 금융권
+            업무 자동화, Document Understanding(OCR) 라벨링·학습 파이프라인.
           </>
         ),
         tags: [
@@ -265,22 +271,22 @@ const blog: Blog = {
   path: "/blog",
   label: "News",
   title: "News & Activities",
-  description: "?�로?�트 보도, ?�사 참여, 발표 ???�동 ?�식",
-  // src/app/blog/posts ??.mdx ?�일??추�??�면 ?�동?�로 목록???�시?�니??
+  description: "프로젝트 보도, 행사 참여, 발표 등 활동 소식",
+  // src/app/blog/posts 에 .mdx 파일을 추가하면 자동으로 목록에 표시됩니다.
 };
 
 const work: Work = {
   path: "/work",
   label: "Projects",
-  title: `Projects ??${person.name}`,
-  description: "AI ?�랫??구축, Agent PoC, ?�업 ?�안 ?�로?�트",
-  // src/app/work/projects ??.mdx ?�일??추�??�면 ?�동?�로 목록???�시?�니??
+  title: `Projects – ${person.name}`,
+  description: "AI 플랫폼 구축, Agent PoC, 사업 제안 프로젝트",
+  // src/app/work/projects 에 .mdx 파일을 추가하면 자동으로 목록에 표시됩니다.
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Gallery ??${person.name}`,
+  title: `Gallery – ${person.name}`,
   description: "",
   images: [],
 };
