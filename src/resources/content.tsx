@@ -9,7 +9,7 @@ const person: Person = {
   lastName: "박",
   name: "박온지",
   role: "AI Product Planner",
-  avatar: "/images/avatar.jpg", // public/images/avatar.jpg 에 프로필 사진 넣기
+  avatar: "/images/profile-onji.jpg", // public/images/profile-onji.jpg 에 프로필 사진 넣기
   email: "dhswl653@gmail.com",
   location: "Asia/Seoul",
   languages: ["한국어", "English"],
