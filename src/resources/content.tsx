@@ -261,7 +261,7 @@ const about: About = {
       {
         name: "Microsoft AI Partner Solution Showcase",
         date: "2026.02.24",
-        description: <List items={["AKeeON 솔루션 제품소개서 작성", "파트너사 Q&A 부스 진행"]} />,
+        description: <List items={["AKeeON 솔루션 제품소개서 컨텐츠 제작", "파트너사 Q&A 부스 기획 및 진행"]} />,
         link: "/news/ms-ai-partner-showcase-2026",
       },
       {
