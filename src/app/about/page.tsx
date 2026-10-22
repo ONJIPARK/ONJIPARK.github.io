@@ -274,7 +274,7 @@ export default function About() {
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
                     </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                    <Text as="div" variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}
                     </Text>
                   </Column>
@@ -299,7 +299,7 @@ export default function About() {
                     <Text id={skill.title} variant="heading-strong-l">
                       {skill.title}
                     </Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
+                    <Text as="div" variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
                     </Text>
                     {skill.tags && skill.tags.length > 0 && (

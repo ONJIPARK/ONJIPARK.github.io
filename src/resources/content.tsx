@@ -1,5 +1,33 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
+import { Column, Line, Row, Text } from "@once-ui-system/core";
+import type { ReactNode } from "react";
+
+// About 페이지용 짧은 항목 목록
+const List = ({ items }: { items: ReactNode[] }) => (
+  <Column as="ul" gap="4" paddingTop="8">
+    {items.map((item, index) => (
+      <Text as="li" key={index} variant="body-default-m" onBackground="neutral-weak">
+        {item}
+      </Text>
+    ))}
+  </Column>
+);
+
+// 이름 — 날짜를 양쪽 정렬로 보여주는 목록 (자격증 등)
+const DatedList = ({ items }: { items: [ReactNode, string][] }) => (
+  <Column as="ul" gap="8" paddingTop="8">
+    {items.map(([name, date], index) => (
+      <Row as="li" key={index} fillWidth horizontal="between" vertical="center" gap="16">
+        <Text variant="body-default-m" onBackground="neutral-strong">
+          {name}
+        </Text>
+        <Text variant="body-default-s" onBackground="neutral-weak">
+          {date}
+        </Text>
+      </Row>
+    ))}
+  </Column>
+);
 
 // ──────────────────────────────────────────────────────────
 // [수정 필요] 이름·이메일·링크는 실제 값으로 교체하세요.
@@ -132,38 +160,71 @@ const about: About = {
         role: "AI Product Planner",
         achievements: [
           <>
-            <strong>사업 기획</strong> — AKeeON 제품소개서, 가격 모델, 솔루션 소개 영상 기획·편집,
-            계약 프로세스 수립. 국군복지몰·에어제타 AI OCR 제안 작업.
+            <strong>사업 기획</strong>
+            <List
+              items={[
+                "AKeeON 제품소개서 · 가격 모델 · 계약 프로세스 수립",
+                "솔루션 소개 영상 기획 · 편집",
+                "국군복지몰 · 에어제타 AI OCR 제안",
+              ]}
+            />
           </>,
           <>
-            <strong>고객 컨택·데모</strong> — AK홀딩스, AK PLAZA, 제주항공, 애경케미칼,
-            애경스페셜티 등 계열사 및 에어제타 등 대외 고객 대상 시연·결과보고.
+            <strong>고객 컨택 · 데모</strong>
+            <List
+              items={[
+                "계열사: AK홀딩스, AK PLAZA, 제주항공, 애경케미칼, 애경스페셜티",
+                "대외 고객: 에어제타 등",
+                "고객 대상 시연 · 결과보고",
+              ]}
+            />
           </>,
           <>
-            <strong>구축·개발</strong> — AKeeON 초기 구축(AI Hub, Orchestrator), 애경케미칼
-            1차·2차 프로젝트 PL(사규검색 RAG · SAP CO · SAP 판매오더 Agent 3종), 제주항공 RAG PoC,
-            에어제타 운항 편조 Agent PoC.
+            <strong>구축 · 개발</strong>
+            <List
+              items={[
+                "AKeeON 초기 구축 (AI Hub, Orchestrator)",
+                "애경케미칼 1차·2차 프로젝트 PL — 사규검색 RAG · SAP CO · SAP 판매오더 Agent 3종",
+                "제주항공 RAG PoC",
+                "에어제타 운항 편조 Agent PoC",
+              ]}
+            />
           </>,
           <>
-            <strong>파트너</strong> — 에티버스·클루커스·AWS·Microsoft와 협업, Microsoft AI
-            Partner Solution Showcase 참여.
+            <strong>파트너</strong>
+            <List
+              items={[
+                "에티버스 · 클루커스 · AWS · Microsoft 협업",
+                "Microsoft AI Partner Solution Showcase 참여",
+              ]}
+            />
           </>,
         ],
         images: [],
       },
       {
-        company: "AK아이에스 · RPA",
+        company: "AK아이에스 · AI & RPA팀",
         timeframe: "2022.02 – 2025.01",
         role: "RPA Developer",
         achievements: [
           <>
-            <strong>KB국민은행 RPA 상시개발</strong>(2024.04–2025.01) — KB 프레임워크 기반 신규
-            과제 설계·개발, 노후 프레임워크 개선, 고객 만족도 80% 이상.
+            <strong>KB국민은행 RPA 상시개발</strong> (2024.04 – 2025.01)
+            <List
+              items={[
+                "KB 프레임워크 기반 신규 과제 설계 · 개발",
+                "노후 프레임워크 개선",
+                "고객 만족도 80% 이상",
+              ]}
+            />
           </>,
           <>
-            <strong>현대카드/커머셜 RPA 상시개발</strong>(2022.03–2023.12) — 특허 큐 기반 병렬
-            처리 아키텍처로 전사 업무 자동화 과제 설계·개발, 망분리·금융 보안 환경에서 150여 개
-            과제 프레임워크·패턴 습득.
+            <strong>현대카드/커머셜 RPA 상시개발</strong> (2022.03 – 2023.12)
+            <List
+              items={[
+                "특허 큐 기반 병렬 처리 아키텍처로 전사 업무 자동화 과제 설계 · 개발",
+                "망분리 · 금융 보안 환경에서 150여 개 과제 프레임워크 · 패턴 습득",
+              ]}
+            />
           </>,
         ],
         images: [],
@@ -181,19 +242,25 @@ const about: About = {
       {
         name: "자격증",
         description: (
-          <>
-            빅데이터분석기사(2025.07) · AWS Solutions Architect – Associate(2025.05) ·
-            정보처리기사(2023.11) · ADsP(2022.09)
-          </>
+          <DatedList
+            items={[
+              ["빅데이터분석기사", "2025.07"],
+              ["AWS Solutions Architect – Associate", "2025.05"],
+              ["정보처리기사", "2023.11"],
+              ["ADsP (데이터분석 준전문가)", "2022.09"],
+            ]}
+          />
         ),
       },
       {
         name: "AI RPA 사업 실습 연계 인턴십 · 산학 협력프로그램",
         description: (
-          <>
-            2021 — 한국보육진흥원 평가 인증 시스템 자동화, (주)코스알엑스 AI RPA 과제 PM(과제
-            발굴·프로세스 정의서 작성)
-          </>
+          <List
+            items={[
+              "2021 · 한국보육진흥원 평가 인증 시스템 자동화",
+              "2021 · (주)코스알엑스 AI RPA 과제 PM — 과제 발굴, 프로세스 정의서 작성",
+            ]}
+          />
         ),
       },
     ],
@@ -205,11 +272,18 @@ const about: About = {
       {
         title: "Cloud Native AI (AWS / Azure)",
         description: (
-          <>
-            AWS Bedrock · S3 · OpenSearch · Lambda · DynamoDB · ECS Fargate 기반 Serverless
-            RAG/Agent 구성. Azure OpenAI · AI Foundry · AI Search · Blob Storage · Container
-            Apps(ACA) 기반 RAG 파이프라인 구축 및 컨테이너 배포.
-          </>
+          <List
+            items={[
+              <>
+                <strong>AWS</strong> — Bedrock · S3 · OpenSearch · Lambda · DynamoDB · ECS Fargate
+                기반 Serverless RAG/Agent 구성
+              </>,
+              <>
+                <strong>Azure</strong> — OpenAI · AI Foundry · AI Search · Blob Storage · Container
+                Apps(ACA) 기반 RAG 파이프라인 구축 및 컨테이너 배포
+              </>,
+            ]}
+          />
         ),
         tags: [
           { name: "AWS", icon: "aws" },
@@ -221,11 +295,13 @@ const about: About = {
       {
         title: "AI 사업 발굴 · 기획",
         description: (
-          <>
-            Pain Point 인터뷰 → AX 과제 도출 → PoC 범위 정의 → 제안서·견적 → 계약까지 전 주기.
-            제품소개서, 가격 모델, 소개 영상, 데모 시나리오 등 세일즈 자산 기획·제작. 임원진 대상
-            결과보고.
-          </>
+          <List
+            items={[
+              "Pain Point 인터뷰 → AX 과제 도출 → PoC 범위 정의 → 제안서·견적 → 계약까지 전 주기",
+              "제품소개서 · 가격 모델 · 소개 영상 · 데모 시나리오 등 세일즈 자산 기획 · 제작",
+              "임원진 대상 결과보고",
+            ]}
+          />
         ),
         tags: [],
         images: [],
@@ -233,11 +309,13 @@ const about: About = {
       {
         title: "AI Agent · RAG 개발",
         description: (
-          <>
-            문서 전처리–임베딩–검색–응답 생성 End-to-End RAG 파이프라인, Hybrid Search · Multi
-            Query · 메타데이터 필터링으로 정확도 개선(95%+). Tool Calling 기반 SAP CO · 판매오더
-            Agent, 항공 운항 편조 Agent 설계.
-          </>
+          <List
+            items={[
+              "End-to-End RAG 파이프라인 — 문서 전처리 → 임베딩 → 검색 → 응답 생성",
+              "Hybrid Search · Multi Query · 메타데이터 필터링으로 정확도 95%+ 개선",
+              "Tool Calling 기반 SAP CO · 판매오더 Agent, 항공 운항 편조 Agent 설계",
+            ]}
+          />
         ),
         tags: [
           { name: "Python", icon: "python" },
@@ -251,10 +329,13 @@ const about: About = {
       {
         title: "Backend / Data · RPA",
         description: (
-          <>
-            FastAPI 서비스 설계, Redis 인증, MySQL ERD·데이터 모델링, CI/CD. UiPath 기반 금융권
-            업무 자동화, Document Understanding(OCR) 라벨링·학습 파이프라인.
-          </>
+          <List
+            items={[
+              "FastAPI 서비스 설계 · Redis 인증 · MySQL ERD/데이터 모델링 · CI/CD",
+              "UiPath 기반 금융권 업무 자동화",
+              "Document Understanding(OCR) 라벨링 · 학습 파이프라인",
+            ]}
+          />
         ),
         tags: [
           { name: "MySQL", icon: "mysql" },
