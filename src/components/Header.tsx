@@ -48,7 +48,7 @@ export default TimeDisplay;
 const navItems: { href: keyof typeof routes; icon: IconName; label: string }[] = [
   { href: "/about", icon: "person", label: about.label },
   { href: "/work", icon: "grid", label: work.label },
-  { href: "/blog", icon: "book", label: blog.label },
+  { href: "/news", icon: "book", label: blog.label },
   { href: "/gallery", icon: "gallery", label: gallery.label },
 ];
 

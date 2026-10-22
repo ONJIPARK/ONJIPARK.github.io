@@ -25,7 +25,7 @@ export default function Blog() {
         image={home.image}
         author={{
           name: person.name,
-          url: `${baseURL}/blog`,
+          url: `${baseURL}/news`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
@@ -34,12 +34,8 @@ export default function Blog() {
       </Heading>
       <Column fillWidth flex={1} gap="40" s={{ gap: "24" }}>
         <Posts range={[1, 1]} thumbnail />
-        <Posts range={[2, 3]} columns="2" thumbnail direction="column" />
+        <Posts range={[2]} columns="2" thumbnail direction="column" />
         <Newsletter marginBottom="l" />
-        <Heading as="h2" variant="heading-strong-xl" marginLeft="l">
-          Earlier posts
-        </Heading>
-        <Posts range={[4]} columns="2" thumbnail direction="column" />
       </Column>
     </Column>
   );

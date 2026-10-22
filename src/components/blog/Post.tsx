@@ -18,7 +18,7 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
     <Card
       fillWidth
       key={post.slug}
-      href={`/blog/${post.slug}`}
+      href={`/news/${post.slug}`}
       transition="micro-medium"
       direction={direction}
       border="transparent"

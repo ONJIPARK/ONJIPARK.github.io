@@ -104,7 +104,7 @@ export default function Home() {
       <RevealFx translateY="16" delay={600}>
         <Projects range={[1, 1]} />
       </RevealFx>
-      {routes["/blog"] && (
+      {routes["/news"] && (
         <Column fillWidth gap="24" marginBottom="l">
           <Row fillWidth paddingRight="64">
             <Line maxWidth={48} />
@@ -122,7 +122,7 @@ export default function Home() {
               s={{ paddingLeft: "16", paddingTop: "8" }}
             >
               <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Latest from the blog
+                Latest News
               </Heading>
             </Row>
             <Row flex={3} paddingX="20" s={{ paddingX: "0" }}>

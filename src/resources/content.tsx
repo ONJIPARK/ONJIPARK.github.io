@@ -349,11 +349,11 @@ const about: About = {
 };
 
 const blog: Blog = {
-  path: "/blog",
+  path: "/news",
   label: "News",
   title: "News & Activities",
   description: "프로젝트 보도, 행사 참여, 발표 등 활동 소식",
-  // src/app/blog/posts 에 .mdx 파일을 추가하면 자동으로 목록에 표시됩니다.
+  // src/app/news/posts 에 .mdx 파일을 추가하면 자동으로 목록에 표시됩니다.
 };
 
 const work: Work = {
