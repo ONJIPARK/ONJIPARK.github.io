@@ -33,8 +33,7 @@ export default function Blog() {
         {blog.title}
       </Heading>
       <Column fillWidth flex={1} gap="40" s={{ gap: "24" }}>
-        <Posts range={[1, 1]} thumbnail />
-        <Posts range={[2]} columns="2" thumbnail direction="column" />
+        <Posts thumbnail />
         <Newsletter marginBottom="l" />
       </Column>
     </Column>
