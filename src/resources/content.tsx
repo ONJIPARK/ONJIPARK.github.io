@@ -172,8 +172,8 @@ const about: About = {
             <List
               items={[
                 "계열사: AK홀딩스, AK PLAZA, 제주항공, 애경케미칼, 애경스페셜티",
-                "대외 고객: 에어제타, 아주큐엠에스  등",
-                "고객 현업/임원진 대상 시연 · 결과보고",
+                "대외 고객: 에어제타, 아주큐엠에스",
+                "고객 현업 / 임원진 대상 시연 · 결과보고",
               ]}
             />
           </>,
@@ -338,14 +338,12 @@ const about: About = {
           <List
             items={[
               "UiPath 기반 금융권 업무 자동화",
-              "Document Understanding(OCR) 라벨링 · 학습 파이프라인",
+              "Document Understanding(OCR) 라벨링 · 학습 파이프라인 구축",
             ]}
           />
         ),
         tags: [
-          { name: "MySQL", icon: "mysql" },
-          { name: "Redis", icon: "redis" },
-          { name: "UiPath", icon: "uipath" },
+          { name: "UiPath", icon: "uipath" }
         ],
         images: [],
       },
