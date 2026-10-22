@@ -67,3 +67,11 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* 한국어 줄바꿈: 글자 단위가 아니라 단어(띄어쓰기) 단위로 줄바꿈 */
+html,
+body,
+body * {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}

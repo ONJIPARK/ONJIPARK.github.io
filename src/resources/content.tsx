@@ -255,7 +255,7 @@ const about: About = {
   },
   activities: {
     display: true,
-    title: "세미나 · 대외 활동",
+    title: "Seminars & Activities",
     items: [
       {
         name: "Microsoft AI Partner Solution Showcase",
@@ -280,12 +280,12 @@ const about: About = {
           <List
             items={[
               <>
-                <strong>AWS</strong> — Bedrock · S3 · OpenSearch · Lambda · DynamoDB · ECS Fargate
-                기반 Serverless 기반 RAG/Agent PoC 개발
+                <strong>AWS</strong> — Bedrock · S3 · OpenSearch · Lambda · DynamoDB · ECS Fargate를 활용한
+                Serverless RAG/Agent PoC 개발
                </>,
               <>
-                <strong>Azure</strong> — OpenAI · AI Foundry · AI Search · Blob · Container
-                Apps(ACA) 기반 AX Platform 구축 및 컨테이너 배포
+                <strong>Azure</strong> — OpenAI · AI Foundry · AI Search · Blob · Container Apps(ACA) 환경에서
+                AX 플랫폼(AKeeON) 개발 · 운영
               </>,
             ]}
           />
@@ -337,7 +337,6 @@ const about: About = {
         description: (
           <List
             items={[
-              "FastAPI 서비스 설계 · Redis 인증 · MySQL ERD/데이터 모델링 · CI/CD",
               "UiPath 기반 금융권 업무 자동화",
               "Document Understanding(OCR) 라벨링 · 학습 파이프라인",
             ]}
