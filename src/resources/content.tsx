@@ -132,20 +132,18 @@ const about: About = {
           가치를 동시에 판단합니다.
         </p>
         <p>
-          AK아이에스 AX사업팀에서 외주 없이 팀 자체 개발한 AX 플랫폼{" "}
-          <strong>AKeeON(AI Chatbot · Orchestrator)</strong>의 초기 구축과 기획을 함께 맡았고,
-          AWS·Azure 클라우드 위에서 AI Chatbot, Orchestrator, SAP 연동 Agent 등을 직접 개발했습니다.
-          이 솔루션은 2년여 만에 애경그룹의 AI 플랫폼으로 자리매김했습니다.
+          AK아이에스 AX사업팀에서 오로지 팀 인원이 자체 개발한 AX 플랫폼{" "}
+          <strong>AKeeON(AI Hub · Orchestrator)</strong>의 초기 기획과 구축을 함께 맡았고,
+          AWS·Azure 클라우드 위에서 AI Hub(플랫폼), Orchestrator(관리자페이지), 시스템 연계 AI Agent 등을 직접 개발했습니다.
+          이 솔루션은 2년여 만에 애경그룹의 AI 플랫폼으로 자리매김하였으며, 대내외로 딜리버리되는 서비스가 되었습니다.
         </p>
         <p>
-          솔루션을 팔기 위해 제품소개서·가격 모델·솔루션 소개 영상·계약 프로세스를 직접 만들었고,
-          홀딩스·AK PLAZA·제주항공·애경케미칼·애경스페셜티 등 계열사와 에어제타 등 대외 고객을
-          직접 만나 데모와 소개를 수행했습니다.{" "}
+          솔루션을 딜리버리하기 위해 세일즈 제품소개서·가격 모델·솔루션 소개 영상 등을 직접 작업하였고,
+          계열사와 대외 고객을 직접 만나 데모와 소개를 수행하였고 경영진에게 설득 / 결과 보고를 진행하였습니다.{" "}
           <strong>
-            AKeeON의 첫 대외 판매 건인 애경케미칼 프로젝트에 PL로 참여해 성공적으로 완료했고,
-            현재 2차 프로젝트를 수행 중
+            AKeeON의 첫 레퍼런스인 애경케미칼 프로젝트에 PL로 참여해 성공적으로 완료했고,
+            현재 2차 프로젝트를 수행 중입니다.
           </strong>
-          입니다.
         </p>
       </>
     ),
@@ -184,7 +182,7 @@ const about: About = {
             <List
               items={[
                 "AKeeON AX 플랫폼 구축 (AI Hub, Orchestrator)",
-                "애경케미칼 1차·2차 프로젝트 PL — 사규검색 RAG · SAP CO · SAP 판매오더 Agent 3종",
+                "애경케미칼 1차·2차 프로젝트 PL — 사규검색 RAG · SAP SD AI Agent",
                 "제주항공 RAG PoC",
                 "에어제타 운항 편조 Agent PoC",
               ]}
@@ -283,11 +281,11 @@ const about: About = {
             items={[
               <>
                 <strong>AWS</strong> — Bedrock · S3 · OpenSearch · Lambda · DynamoDB · ECS Fargate
-                기반 Serverless RAG/Agent 구성
-              </>,
+                기반 Serverless 기반 RAG/Agent PoC 개발
+               </>,
               <>
-                <strong>Azure</strong> — OpenAI · AI Foundry · AI Search · Blob Storage · Container
-                Apps(ACA) 기반 RAG 파이프라인 구축 및 컨테이너 배포
+                <strong>Azure</strong> — OpenAI · AI Foundry · AI Search · Blob · Container
+                Apps(ACA) 기반 AX Platform 구축 및 컨테이너 배포
               </>,
             ]}
           />
@@ -320,7 +318,8 @@ const about: About = {
             items={[
               "End-to-End RAG 파이프라인 — 문서 전처리 → 임베딩 → 검색 → 응답 생성",
               "Hybrid Search · Multi Query · 메타데이터 필터링으로 정확도 95%+ 개선",
-              "Tool Calling 기반 SAP CO · 판매오더 Agent, 항공 운항 편조 Agent 설계",
+              "Tool Calling 기반 SAP SD AI Agent, 항공 운항 편조 AI Agent 설계 및 개발",
+              "AI Planner, Orchestration, LLM Route 로직 개발",
             ]}
           />
         ),
