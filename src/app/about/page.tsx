@@ -11,6 +11,7 @@ import {
   Meta,
   Schema,
   Row,
+  SmartLink,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social , home } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -43,6 +44,11 @@ export default function About() {
       title: about.studies.title,
       display: about.studies.display,
       items: about.studies.institutions.map((institution) => institution.name),
+    },
+    {
+      title: about.activities.title,
+      display: about.activities.display,
+      items: about.activities.items.map((activity) => activity.name),
     },
     {
       title: about.technical.title,
@@ -277,6 +283,41 @@ export default function About() {
                     <Text as="div" variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}
                     </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.activities.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.activities.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                {about.activities.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.activities.items.map((activity, index) => (
+                  <Column key={`${activity.name}-${index}`} fillWidth gap="4">
+                    <Row fillWidth horizontal="between" vertical="end" gap="16">
+                      <Text id={activity.name} variant="heading-strong-l">
+                        {activity.name}
+                      </Text>
+                      <Text variant="heading-default-xs" onBackground="neutral-weak">
+                        {activity.date}
+                      </Text>
+                    </Row>
+                    <Text as="div" variant="body-default-m" onBackground="neutral-weak">
+                      {activity.description}
+                    </Text>
+                    {activity.link && (
+                      <SmartLink href={activity.link} suffixIcon="arrowRight">
+                        <Text variant="body-default-s">관련 소식 보기</Text>
+                      </SmartLink>
+                    )}
                   </Column>
                 ))}
               </Column>

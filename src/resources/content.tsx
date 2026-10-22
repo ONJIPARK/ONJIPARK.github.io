@@ -127,14 +127,14 @@ const about: About = {
     description: (
       <>
         <p>
-          <strong>AI 솔루션을 직접 만들고, 직접 팔고, 직접 구축까지 해본 AI Product Planner</strong>
+          <strong>AI 솔루션을 직접 기획하고, 구축하고, 딜리버리하기까지 경험한 AI Product Planner </strong>
           입니다. 3년의 RPA 개발, 2년의 AI 기획·개발 경험을 바탕으로 기술 실현 가능성과 비즈니스
           가치를 동시에 판단합니다.
         </p>
         <p>
           AK아이에스 AX사업팀에서 외주 없이 팀 자체 개발한 AX 플랫폼{" "}
-          <strong>AKeeON(AI Chatbot · Admin Page)</strong>의 초기 구축과 기획을 함께 맡았고,
-          AWS·Azure 클라우드 위에서 AI Chatbot, Admin Page, SAP 연동 Agent 등을 직접 개발했습니다.
+          <strong>AKeeON(AI Chatbot · Orchestrator)</strong>의 초기 구축과 기획을 함께 맡았고,
+          AWS·Azure 클라우드 위에서 AI Chatbot, Orchestrator, SAP 연동 Agent 등을 직접 개발했습니다.
           이 솔루션은 2년여 만에 애경그룹의 AI 플랫폼으로 자리매김했습니다.
         </p>
         <p>
@@ -157,15 +157,15 @@ const about: About = {
       {
         company: "AK아이에스 · AX사업팀",
         timeframe: "2025.01 – 현재",
-        role: "AI Product Planner",
+        role: "PL / AI Product Planner",
         achievements: [
           <>
             <strong>사업 기획</strong>
             <List
               items={[
-                "AKeeON 제품소개서 · 가격 모델 · 계약 프로세스 수립",
+                "AKeeON 제품소개서 · 가격 모델 수립",
                 "솔루션 소개 영상 기획 · 편집",
-                "국군복지몰 · 에어제타 AI OCR 제안",
+                "국군복지몰 · 에어제타 AI OCR 제안작업",
               ]}
             />
           </>,
@@ -174,8 +174,8 @@ const about: About = {
             <List
               items={[
                 "계열사: AK홀딩스, AK PLAZA, 제주항공, 애경케미칼, 애경스페셜티",
-                "대외 고객: 에어제타 등",
-                "고객 대상 시연 · 결과보고",
+                "대외 고객: 에어제타, 아주큐엠에스  등",
+                "고객 현업/임원진 대상 시연 · 결과보고",
               ]}
             />
           </>,
@@ -183,19 +183,10 @@ const about: About = {
             <strong>구축 · 개발</strong>
             <List
               items={[
-                "AKeeON 초기 구축 (AI Hub, Orchestrator)",
+                "AKeeON AX 플랫폼 구축 (AI Hub, Orchestrator)",
                 "애경케미칼 1차·2차 프로젝트 PL — 사규검색 RAG · SAP CO · SAP 판매오더 Agent 3종",
                 "제주항공 RAG PoC",
                 "에어제타 운항 편조 Agent PoC",
-              ]}
-            />
-          </>,
-          <>
-            <strong>파트너</strong>
-            <List
-              items={[
-                "에티버스 · 클루커스 · AWS · Microsoft 협업",
-                "Microsoft AI Partner Solution Showcase 참여",
               ]}
             />
           </>,
@@ -211,9 +202,7 @@ const about: About = {
             <strong>KB국민은행 RPA 상시개발</strong> (2024.04 – 2025.01)
             <List
               items={[
-                "KB 프레임워크 기반 신규 과제 설계 · 개발",
-                "노후 프레임워크 개선",
-                "고객 만족도 80% 이상",
+                "RPA 과제 설계, 개발",
               ]}
             />
           </>,
@@ -221,8 +210,8 @@ const about: About = {
             <strong>현대카드/커머셜 RPA 상시개발</strong> (2022.03 – 2023.12)
             <List
               items={[
-                "특허 큐 기반 병렬 처리 아키텍처로 전사 업무 자동화 과제 설계 · 개발",
-                "망분리 · 금융 보안 환경에서 150여 개 과제 프레임워크 · 패턴 습득",
+                "Queue 기반 RPA 과제 설계, 개발",
+                "Blueprism -> Uipath 전환 과제 설계, 개발",
               ]}
             />
           </>,
@@ -248,6 +237,7 @@ const about: About = {
               ["AWS Solutions Architect – Associate", "2025.05"],
               ["정보처리기사", "2023.11"],
               ["ADsP (데이터분석 준전문가)", "2022.09"],
+              ["자동자 2종보통", "2022.02"]
             ]}
           />
         ),
@@ -262,6 +252,23 @@ const about: About = {
             ]}
           />
         ),
+      },
+    ],
+  },
+  activities: {
+    display: true,
+    title: "세미나 · 대외 활동",
+    items: [
+      {
+        name: "Microsoft AI Partner Solution Showcase",
+        date: "2026.02.24",
+        description: <List items={["AKeeON 솔루션 제품소개서 작성", "파트너사 Q&A 부스 진행"]} />,
+        link: "/news/ms-ai-partner-showcase-2026",
+      },
+      {
+        name: "전사 조직문화 전파 유닛",
+        date: "2026",
+        description: <List items={["본부 상·하반기 타운홀 미팅 기획 · 진행 및 대표 보고"]} />,
       },
     ],
   },
@@ -299,7 +306,7 @@ const about: About = {
             items={[
               "Pain Point 인터뷰 → AX 과제 도출 → PoC 범위 정의 → 제안서·견적 → 계약까지 전 주기",
               "제품소개서 · 가격 모델 · 소개 영상 · 데모 시나리오 등 세일즈 자산 기획 · 제작",
-              "임원진 대상 결과보고",
+              "임원진 대상 설득 · 결과보고",
             ]}
           />
         ),
