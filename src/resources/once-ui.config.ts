@@ -14,7 +14,7 @@ import {
 import { home, person, social } from "./content";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://onji-park.github.io"; // [수정 필요] 실제 배포 주소
+const baseURL: string = "https://onjipark.github.io"; // [?�정 ?�요] ?�제 배포 주소
 
 const routes: RoutesConfig = {
   "/": true,
@@ -37,7 +37,7 @@ const protectedRoutes: ProtectedRoutesConfig = {};
 // Import and set font for each variant
 import { Noto_Sans_KR, Geist_Mono } from "next/font/google";
 
-// 한글 포함 본문·제목 폰트. Pretendard를 쓰려면 next/font/local 로 교체하세요.
+// ?��? ?�함 본문·?�목 ?�트. Pretendard�??�려�?next/font/local �?교체?�세??
 const heading = Noto_Sans_KR({
   variable: "--font-heading",
   subsets: ["latin"],
@@ -142,7 +142,7 @@ const effects: EffectsConfig = {
 };
 
 // Newsletter signups go straight into your Aveiro audience (https://www.aveiro.app),
-// where you can write and send the newsletter too. In Aveiro, open Audience → Embed,
+// where you can write and send the newsletter too. In Aveiro, open Audience ??Embed,
 // create a form, add this site's domain to its allowed sites and paste the form's public ID here.
 const newsletterForm: NewsletterFormConfig = {
   aveiroEmbedId: "",
@@ -188,7 +188,7 @@ const newsletterForm: NewsletterFormConfig = {
   },
 };
 
-// default schema data — pulls from content.tsx so there's one source of truth
+// default schema data ??pulls from content.tsx so there's one source of truth
 const schema: SchemaConfig = {
   logo: "",
   type: "Person",
@@ -197,7 +197,7 @@ const schema: SchemaConfig = {
   email: person.email,
 };
 
-// social links — derived from the social array in content.tsx to avoid duplication
+// social links ??derived from the social array in content.tsx to avoid duplication
 const sameAs: SameAsConfig = {
   threads: social.find((s) => s.name === "Threads")?.link ?? "",
   linkedin: social.find((s) => s.name === "LinkedIn")?.link ?? "",
