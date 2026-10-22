@@ -182,7 +182,8 @@ const about: About = {
             <List
               items={[
                 "AKeeON AX 플랫폼 구축 (AI Hub, Orchestrator)",
-                "애경케미칼 1차·2차 프로젝트 PL — 사규검색 RAG · SAP SD AI Agent",
+                "애경케미칼 1차 프로젝트 PL — 사규검색 RAG · SAP SD AI Agent 구축",
+                "애경케미칼 2차 프로젝트 PL — AI Planner, Orchestration, LLM Route 로직 개발",
                 "제주항공 RAG PoC",
                 "에어제타 운항 편조 Agent PoC",
               ]}
