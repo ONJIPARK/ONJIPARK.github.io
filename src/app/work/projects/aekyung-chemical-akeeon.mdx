@@ -2,7 +2,7 @@
 title: "[애경케미칼] AKeeON AI 플랫폼 도입 1차·2차 (PL)"
 order: 1
 publishedAt: "2026-04-01"
-summary: "AKeeON의 첫 대외 판매 건. PL로 사규검색 RAG + SAP CO · SAP 판매오더 Agent 3종을 구축 완료하고, Public LLM 2차 확장을 수행 중."
+summary: "AKeeON의 첫 대외 판매 건. PL로 사규검색 RAG + · SAP SO AI Agent 2종을 구축 완료하고, Public LLM 2차 확장을 수행 중."
 images:
   - "/images/projects/chemical/cover-01.jpg"
 team:
@@ -13,18 +13,20 @@ team:
 
 ## 1차 — AI 플랫폼 도입 (2026.04 – 2026.06)
 
-AKeeON 기본 스펙인 **사규검색 Agent(RAG)** 에 더해, 현업 인터뷰로 발굴한 추가 니즈를 Agent 2종으로 구현했습니다.
+AKeeON 기본 스펙인 **사규검색 Agent(RAG)** 에 더해, 현업 인터뷰로 발굴한 추가 니즈를 바탕으로 Agent 2종을 설계하고, 그중 SAP SO AI Agent를 구현했습니다.
 
-- **SAP CO Agent** — SAP CO(관리회계) 모듈 연동, 원가·수익성 데이터를 자연어로 조회·집계
-- **SAP 판매오더 AI Agent** — SAP SO 모듈 연동, 판매오더 현황을 자연어로 조회·집계
+- **SAP CO AI Agent** — SAP CO(관리회계) 모듈 연동, 원가·수익성 데이터를 자연어로 조회·집계하여 경영진 회의 보고서 작성, 계획 대비 실적 증빙
+- **SAP SO AI Agent** — SAP SO 모듈 연동, 자연어로 오더/납품문서 조회, 생성, 삭제, 수정 및 자재/판매처 조회
 
-역할: **PL**, 현업 인터뷰를 통한 Agent 니즈 발굴, Agent 시나리오 설계, 개발, 데모 시연 및 결과보고
+역할: **PL**, 현업 인터뷰를 통한 Agent 니즈 발굴, Agent 시나리오 설계, 결과보고 및 현업 설명회 진행
+
 성과: 1차 성공적 완료 → **2차 프로젝트 수주**로 연결
 
 ## 2차 — Public LLM 확장 (2026.07 – 2026.12, 진행 중)
 
-목적별 RAG·Agent에 머물던 1차 플랫폼을 범용 AI 업무 환경으로 확장합니다.
+목적별 RAG·Agent에 머물던 1차 AX 플랫폼을 범용 AI 업무 환경으로 확장합니다.
 
 - **Public LLM 멀티 모델** — Claude · GPT · Gemini 등 퍼블릭 모델을 한 화면에서 선택해 답변 수신
-- **웹 검색 · 딥리서치**
-- **파일 분석 · 생성**
+- **웹 검색 · 딥리서치** — 업무 자료용 이미지 생성
+- **파일 분석 · 생성** — 문서·엑셀 분석·요약 및 결과 문서 생성
+- **LLMOps** — 토큰·비용 모니터링, 품질 피드백, 모델·프롬프트 관리

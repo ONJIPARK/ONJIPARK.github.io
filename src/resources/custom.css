@@ -75,3 +75,22 @@ body * {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
+
+/* 문단·목록 줄바꿈: 마지막 줄에 한 단어만 남는 것을 줄여 고르게 */
+p,
+li {
+  text-wrap: pretty;
+}
+
+/* 모바일: 목록 들여쓰기를 줄여 본문 폭 확보 */
+@media (max-width: 768px) {
+  main ul,
+  main ol {
+    padding-left: 1.25rem;
+  }
+
+  main li ul,
+  main li ol {
+    padding-left: 1.1rem;
+  }
+}

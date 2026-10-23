@@ -212,13 +212,13 @@ export default function About() {
 
           {about.work.display && (
             <>
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+              <Heading as="h2" id={about.work.title} className={styles.sectionTitle} variant="display-strong-s" marginBottom="m">
                 {about.work.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.work.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+                    <Row className={styles.metaRow} fillWidth horizontal="between" vertical="end" marginBottom="4">
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
                       </Text>
@@ -229,7 +229,7 @@ export default function About() {
                     <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
                       {experience.role}
                     </Text>
-                    <Column as="ul" gap="16">
+                    <Column as="ul" gap="16" style={{ margin: 0 }}>
                       {experience.achievements.map(
                         (achievement: React.ReactNode, index: number) => (
                           <Text
@@ -271,7 +271,7 @@ export default function About() {
 
           {about.studies.display && (
             <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
+              <Heading as="h2" id={about.studies.title} className={styles.sectionTitle} variant="display-strong-s" marginBottom="m">
                 {about.studies.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
@@ -293,7 +293,7 @@ export default function About() {
             <>
               <Heading
                 as="h2"
-                id={about.activities.title}
+                id={about.activities.title} className={styles.sectionTitle}
                 variant="display-strong-s"
                 marginBottom="m"
               >
@@ -302,7 +302,7 @@ export default function About() {
               <Column fillWidth gap="l" marginBottom="40">
                 {about.activities.items.map((activity, index) => (
                   <Column key={`${activity.name}-${index}`} fillWidth gap="4">
-                    <Row fillWidth horizontal="between" vertical="end" gap="16">
+                    <Row className={styles.metaRow} fillWidth horizontal="between" vertical="end" gap="16">
                       <Text id={activity.name} variant="heading-strong-l">
                         {activity.name}
                       </Text>
@@ -328,7 +328,7 @@ export default function About() {
             <>
               <Heading
                 as="h2"
-                id={about.technical.title}
+                id={about.technical.title} className={styles.sectionTitle}
                 variant="display-strong-s"
                 marginBottom="40"
               >

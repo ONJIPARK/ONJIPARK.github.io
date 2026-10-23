@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 // About 페이지용 짧은 항목 목록
 const List = ({ items }: { items: ReactNode[] }) => (
-  <Column as="ul" gap="4" paddingTop="8">
+  <Column as="ul" gap="4" paddingTop="8" style={{ margin: 0 }}>
     {items.map((item, index) => (
       <Text as="li" key={index} variant="body-default-m" onBackground="neutral-weak">
         {item}
@@ -15,7 +15,7 @@ const List = ({ items }: { items: ReactNode[] }) => (
 
 // 이름 — 날짜를 양쪽 정렬로 보여주는 목록 (자격증 등)
 const DatedList = ({ items }: { items: [ReactNode, string][] }) => (
-  <Column as="ul" gap="8" paddingTop="8">
+  <Column as="ul" gap="8" paddingTop="8" style={{ margin: 0, paddingLeft: 0 }}>
     {items.map(([name, date], index) => (
       <Row as="li" key={index} fillWidth horizontal="between" vertical="center" gap="16">
         <Text variant="body-default-m" onBackground="neutral-strong">
@@ -51,12 +51,6 @@ const newsletter: Newsletter = {
 };
 
 const social: Social = [
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/ONJIPARK",
-    essential: true,
-  },
   {
     name: "LinkedIn",
     icon: "linkedin",
@@ -268,6 +262,11 @@ const about: About = {
         name: "전사 조직문화 전파 유닛",
         date: "2026",
         description: <List items={["본부 상·하반기 타운홀 미팅 기획 · 진행 및 대표 보고"]} />,
+      },
+      {
+        name: "전산 통합서버 구축 TF (사이드 프로젝트)",
+        date: "2026.02 – 2026.11",
+        description: <List items={["사용자 2천 명 규모 교회 전산 통합 서버 구축 TF 소집 · 총괄 / FE · BE 수행"]} />,
       },
     ],
   },
