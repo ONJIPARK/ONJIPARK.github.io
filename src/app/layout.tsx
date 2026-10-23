@@ -27,8 +27,8 @@ export async function generateMetadata() {
   });
 }
 
-// viewport-fit=cover lets the bottom menu sit above the home indicator
-// (see Header.module.scss) instead of the browser letterboxing the page.
+// viewport-fit=cover lets the page extend under the phone notch / home indicator
+// instead of the browser letterboxing the page.
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -164,7 +164,6 @@ export default async function RootLayout({
               }}
             />
           </RevealFx>
-          <Flex fillWidth minHeight="16" s={{ hide: true }} />
           <Header />
           <Flex as="main" zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
             <Flex horizontal="center" fillWidth minHeight="0">

@@ -1,22 +1,116 @@
 @use "./breakpoints.scss" as breakpoints;
 
-.mask {
-    pointer-events: none;
-    backdrop-filter: blur(0.5rem);
-    background: linear-gradient(to bottom, var(--page-background), var(--static-transparent));
-    mask-image: linear-gradient(rgba(0,0,0) 25%, rgba(0, 0, 0, 0) 100%);
-    mask-size: 100% 100%;
+// Full-width tab bar pinned to the top of the page.
+.bar {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    background: color-mix(in srgb, var(--page-background) 82%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--neutral-alpha-medium);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 72rem;
+    height: 68px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.bar .brand {
+    flex: 1;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--neutral-on-background-strong);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.tabs {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    gap: 4px;
+}
+
+.bar .tab {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    color: var(--neutral-on-background-weak);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+
+    &:hover {
+        color: var(--neutral-on-background-strong);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: -1px;
+        height: 3px;
+        border-radius: 3px 3px 0 0;
+        background: transparent;
+        transition: background 0.15s ease;
+    }
+}
+
+.bar .active {
+    font-weight: 700;
+    color: var(--brand-on-background-strong);
+
+    &::after {
+        background: var(--brand-solid-strong);
+    }
+}
+
+.actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 @media (max-width: breakpoints.$s) {
-    .position {
-        top: auto;
-        // Clear the home indicator on phones without a home button.
-        bottom: calc(var(--static-space-24) + env(safe-area-inset-bottom, 0px));
+    .inner {
+        height: 56px;
+        padding: 0 8px;
+        gap: 4px;
     }
 
-    .mask {
-        transform: rotate(180deg);
-        bottom: 0;
+    .bar .brand {
+        display: none;
+    }
+
+    .tabs {
+        flex: 1;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .bar .tab {
+        padding: 0 8px;
+        font-size: 0.9375rem;
+
+        &::after {
+            left: 6px;
+            right: 6px;
+        }
+    }
+
+    .actions {
+        flex: 0 0 auto;
     }
 }
