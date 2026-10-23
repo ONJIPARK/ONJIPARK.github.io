@@ -15,7 +15,11 @@ export function Projects({ range, exclude }: ProjectsProps) {
     allProjects = allProjects.filter((post) => !exclude.includes(post.slug));
   }
 
+  // `order` in frontmatter pins a project's position; the rest follow, newest first
   const sortedProjects = allProjects.sort((a, b) => {
+    const orderA = a.metadata.order ?? Number.POSITIVE_INFINITY;
+    const orderB = b.metadata.order ?? Number.POSITIVE_INFINITY;
+    if (orderA !== orderB) return orderA - orderB;
     return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
   });
 

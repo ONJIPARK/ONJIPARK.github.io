@@ -77,8 +77,8 @@ const home: Home = {
   label: "Home",
   title: `${person.name} — AI Product Planner`,
   description:
-    "AI 솔루션을 직접 만들고, 직접 팔고, 직접 구축까지 해본 AI Product Planner의 포트폴리오",
-  headline: <>AI 솔루션을 만들고, 팔고, 구축까지 이어온 기획자</>,
+    "AI 솔루션을 직접 기획하고, 구축하고, 딜리버리까지 해본 AI Product Planner의 포트폴리오",
+  headline: <>AI 솔루션을 기획하고, 구축하고, 딜리버리까지 경험해온 AI Product Planner</>,
   featured: {
     display: true,
     title: (
@@ -94,11 +94,11 @@ const home: Home = {
   },
   subline: (
     <>
-      AK아이에스 AX사업팀에서 AWS·Azure 위에 AI 플랫폼{" "}
+      AK아이에스 AX사업팀에서 AWS·Azure 기반 Serverless AX 플랫폼{" "}
       <Text as="span" size="xl" weight="strong">
         AKeeON
       </Text>
-      을 팀 자체 개발하고, 첫 대외 판매부터 구축 PL까지 전 주기를 경험했습니다.
+       을 직접 개발하고, 첫 대외 판매부터 구축 PL까지 전 주기를 경험했습니다.
       <br />
       RPA 개발 3년 + AI 기획·개발 2년.
     </>
@@ -127,19 +127,19 @@ const about: About = {
     description: (
       <>
         <p>
-          <strong>AI 솔루션을 직접 기획하고, 구축하고, 딜리버리하기까지 경험한 AI Product Planner </strong>
+          <strong>AI 솔루션을 직접 기획하고, 구축하고, 딜리버리까지 경험한 AI Product Planner </strong>
           입니다. 3년의 RPA 개발, 2년의 AI 기획·개발 경험을 바탕으로 기술 실현 가능성과 비즈니스
           가치를 동시에 판단합니다.
         </p>
         <p>
-          AK아이에스 AX사업팀에서 오로지 팀 인원이 자체 개발한 AX 플랫폼{" "}
+          AK아이에스 AX사업팀에서 자체 개발한 AX 플랫폼{" "}
           <strong>AKeeON(AI Hub · Orchestrator)</strong>의 초기 기획과 구축을 함께 맡았고,
           AWS·Azure 클라우드 위에서 AI Hub(플랫폼), Orchestrator(관리자페이지), 시스템 연계 AI Agent 등을 직접 개발했습니다.
-          이 솔루션은 2년여 만에 애경그룹의 AI 플랫폼으로 자리매김하였으며, 대내외로 딜리버리되는 서비스가 되었습니다.
+          이 솔루션은 1년여 만에 애경그룹의 대표 AX 플랫폼으로 자리매김하였으며, 대내외로 딜리버리되는 서비스가 되었습니다.
         </p>
         <p>
           솔루션을 딜리버리하기 위해 세일즈 제품소개서·가격 모델·솔루션 소개 영상 등을 직접 작업하였고,
-          계열사와 대외 고객을 직접 만나 데모와 소개를 수행하였고 경영진에게 설득 / 결과 보고를 진행하였습니다.{" "}
+          계열사와 대외 고객을 직접 만나 데모와 소개를 수행하였으며, 경영진에게 설득 / 결과 보고를 진행하였습니다.{" "}
           <strong>
             AKeeON의 첫 레퍼런스인 애경케미칼 프로젝트에 PL로 참여해 성공적으로 완료했고,
             현재 2차 프로젝트를 수행 중입니다.

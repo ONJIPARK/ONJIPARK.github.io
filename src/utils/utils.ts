@@ -19,6 +19,8 @@ type Metadata = {
   tag?: string;
   team: Team[];
   link?: string;
+  /** Manual list position; lower comes first, unset items follow by date */
+  order?: number;
 };
 
 import { notFound } from "next/navigation";
@@ -49,6 +51,7 @@ function readMDXFile(filePath: string) {
     tag: data.tag || [],
     team: data.team || [],
     link: data.link || "",
+    order: typeof data.order === "number" ? data.order : undefined,
   };
 
   return { metadata, content };
