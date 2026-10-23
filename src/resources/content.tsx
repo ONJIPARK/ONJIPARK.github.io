@@ -363,7 +363,7 @@ const work: Work = {
   path: "/work",
   label: "Projects",
   title: `Projects – ${person.name}`,
-  description: "AI 플랫폼 구축, Agent PoC, 사업 제안 프로젝트",
+  description: "AX 플랫폼 구축, Agent PoC, 사업 제안 프로젝트",
   // src/app/work/projects 에 .mdx 파일을 추가하면 자동으로 목록에 표시됩니다.
 };
 
