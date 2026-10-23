@@ -6,7 +6,6 @@ import rehypeKatex from "rehype-katex";
 
 import {
   Heading,
-  HeadingLink,
   Text,
   InlineCode,
   TextProps,
@@ -87,16 +86,35 @@ function slugify(str: string): string {
   }).replace(/\-\-+/g, "-"); // Replace multiple - with single -
 }
 
+// Section headings keep an id (so #section links work) but drop the
+// copy-link button that HeadingLink adds.
+const headingVariant = {
+  h1: "heading-strong-xl",
+  h2: "heading-strong-xl",
+  h3: "heading-strong-l",
+  h4: "heading-strong-m",
+  h5: "heading-strong-s",
+  h6: "heading-strong-xs",
+} as const;
+
 function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
   const CustomHeading = ({
     children,
     ...props
-  }: Omit<React.ComponentProps<typeof HeadingLink>, "as" | "id">) => {
+  }: Omit<React.ComponentProps<typeof Heading>, "as" | "id">) => {
     const slug = slugify(children as string);
     return (
-      <HeadingLink marginTop="24" marginBottom="12" as={as} id={slug} {...props}>
+      <Heading
+        marginTop="24"
+        marginBottom="12"
+        as={as}
+        id={slug}
+        variant={headingVariant[as]}
+        wrap="balance"
+        {...props}
+      >
         {children}
-      </HeadingLink>
+      </Heading>
     );
   };
 
